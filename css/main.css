@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap");
+html {
+  font-size: 62.5%;
+  font-family: "Space Mono", monospace;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c5e4e7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #00494d;
+  letter-spacing: 1rem;
+}
+
+.container {
+  width: 805px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn {
+  background-color: #00494d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 2rem;
+  margin: 0.5rem 0.25rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn:disabled {
+  color: #00494d;
+  background-color: #26c0ab;
+  opacity: 0.2;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+}
+.input-group .label {
+  color: #5e7a7d;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+.input-group .input {
+  border: none;
+  background-color: #f4fafa;
+  height: 4rem;
+  border-radius: 5px;
+  outline-color: #26c0ab;
+  text-align: end;
+  font-family: inherit;
+  font-weight: 700;
+  color: #00494d;
+  font-size: 2rem;
+}
+.input-group .input::placeholder {
+  color: #7f9c9f;
+}
+.input-group .input--custom {
+  text-align: center;
+  width: 10rem;
+  font-size: 2rem;
+  margin: 0.5rem 0.25rem;
+  padding: 0;
+}
+.input-group .input--custom::placeholder {
+  font-weight: 700;
+  color: #5e7a7d;
+}
+.input-group .input.error {
+  border: 2px solid orange;
+  outline-color: orange;
+}
+.input-group .check-box .btn {
+  width: 10rem;
+  height: 4rem;
+}
+.input-group .check-box .btn.active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.form {
+  margin: 2rem;
+}
+
+.calc {
+  background-color: #00494d;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.calc__title {
+  color: white;
+  font-size: 1.5rem;
+}
+.calc__subtitle {
+  color: #c5e4e7;
+  font-size: 1.2rem;
+}
+.calc__total, .calc__tip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #26c0ab;
+  margin-top: 1.5rem;
+}
+.calc .btn {
+  background-color: #26c0ab;
+  width: 100%;
+  margin-top: auto;
+  padding: 0.7rem;
+}
