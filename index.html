@@ -12,6 +12,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <script defer src="script.js"></script>
     <title>Frontend Mentor | Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -64,16 +65,16 @@
             <div class="calc__title">Tip Amount</div>
             <div class="calc__subtitle">/ person</div>
           </div>
-          <div class="calc__display">$0.00</div>
+          <div id="tip" class="calc__display">$0.00</div>
         </div>
         <div class="calc__total">
           <div class="calc__label">
             <div class="calc__title">Total</div>
             <div class="calc__subtitle">/ person</div>
           </div>
-          <div class="calc__display">$0.00</div>
+          <div id="total" class="calc__display">$0.00</div>
         </div>
-        <button disabled class="btn btn--lg">Reset</button>
+        <button disabled class="btn btn--lg btn--reset">Reset</button>
       </div>
     </div>
 
