@@ -60,10 +60,14 @@ checkboxContainer.addEventListener("click", function (e) {
 
 billEl.addEventListener("keyup", function (e) {
   bill = +e.target.value;
+  if (!checkValues()) return;
+  calTip(bill, tipPercent, numOfPeople);
 });
 
 numOfPeopleEl.addEventListener("keyup", function (e) {
   numOfPeople = +e.target.value;
+  if (!checkValues()) return;
+  calTip(bill, tipPercent, numOfPeople);
 });
 
 btnReset.addEventListener("click", resetFrom);
