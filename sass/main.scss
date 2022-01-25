@@ -87,10 +87,20 @@ body {
   display: flex;
   flex-direction: column;
   margin: 1.5rem;
+  position: relative;
+
   .label {
     color: $dark-color-2;
     font-size: 1.5rem;
     margin-top: 1.5rem;
+  }
+
+  .icon {
+    height: auto;
+    width: 1.5rem;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
   }
 
   .input {
@@ -104,6 +114,7 @@ body {
     font-weight: 700;
     color: $dark-color-1;
     font-size: 2rem;
+    margin-top: 0.5rem;
 
     &::placeholder {
       color: $dark-color-3;
