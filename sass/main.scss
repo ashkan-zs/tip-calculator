@@ -93,6 +93,8 @@ body {
     color: $dark-color-2;
     font-size: 1.5rem;
     margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
   }
 
   .icon {
@@ -189,4 +191,12 @@ body {
     margin-top: auto;
     padding: 0.7rem;
   }
+}
+
+.error-msg {
+  color: orange;
+}
+
+.hidden {
+  display: none;
 }

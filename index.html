@@ -32,11 +32,21 @@
       <div class="form">
         <div class="input-group">
           <img class="icon" src="images/icon-dollar.svg" alt="person" />
-          <label class="label" for="bill">Bill</label>
+          <label class="label" for="bill"
+            ><span>Bill</span
+            ><span class="error-msg error-msg--bill hidden"
+              >can't be zero</span
+            ></label
+          >
           <input class="input" id="bill" type="number" placeholder="0" />
         </div>
         <div class="input-group">
-          <label class="label" for="tip">Select Tip %</label>
+          <label class="label" for="tip"
+            ><span>Select Tip %</span
+            ><span class="error-msg error-msg--tip hidden"
+              >choose one</span
+            ></label
+          >
           <div class="check-box">
             <button class="btn btn--sm" data-value="5">5%</button>
             <button class="btn btn--sm" data-value="10">10%</button>
@@ -52,7 +62,12 @@
         </div>
         <div class="input-group">
           <img class="icon" src="images/icon-person.svg" alt="person" />
-          <label class="label" for="num-of-people">Number of People</label>
+          <label class="label" for="num-of-people"
+            ><span>Number of People</span
+            ><span class="error-msg error-msg--num hidden"
+              >can't be zero</span
+            ></label
+          >
           <input
             class="input"
             id="num-of-people"

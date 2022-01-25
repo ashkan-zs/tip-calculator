@@ -4,7 +4,10 @@ const checkboxContainer = document.querySelector(".check-box");
 const btns = checkboxContainer.querySelectorAll(".btn");
 const btnReset = document.querySelector(".btn--reset");
 const billEl = document.querySelector("#bill");
+const billErrorEl = document.querySelector(".error-msg--bill");
 const numOfPeopleEl = document.querySelector("#num-of-people");
+const numOfPeopleErrorEl = document.querySelector(".error-msg--num");
+const tipErrorEl = document.querySelector(".error-msg--tip");
 const tipLabel = document.querySelector("#tip");
 const totalLabel = document.querySelector("#total");
 const customTip = document.querySelector(".input--custom");
@@ -29,14 +32,24 @@ const calTip = (bill, percent, num) => {
 const checkValues = function () {
   billEl.classList.remove("error");
   numOfPeopleEl.classList.remove("error");
+  document
+    .querySelectorAll(".error-msg")
+    .forEach((err) => err.classList.add("hidden"));
 
   if (bill === 0) {
     billEl.classList.add("error");
+    billErrorEl.classList.remove("hidden");
+    return false;
+  }
+
+  if (tipPercent === 0) {
+    tipErrorEl.classList.remove("hidden");
     return false;
   }
 
   if (numOfPeople === 0) {
     numOfPeopleEl.classList.add("error");
+    numOfPeopleErrorEl.classList.remove("hidden");
     return false;
   }
 
