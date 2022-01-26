@@ -21,6 +21,7 @@ const resetFrom = function () {
   tipLabel.textContent = totalLabel.textContent = "$0.00";
   billEl.value = numOfPeopleEl.value = customTip.value = "";
   btns.forEach((btn) => btn.classList.remove("active"));
+  btnReset.disabled = true;
 };
 
 const calTip = (bill, percent, num) => {

@@ -33,6 +33,7 @@ body {
   .container {
     width: 80%;
     min-width: 300px;
+    height: 85%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
   }
@@ -48,6 +49,10 @@ body {
   margin: 0.5rem 0.25rem;
   cursor: pointer;
   font-weight: 700;
+}
+.btn:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
 }
 .btn:disabled {
   color: #00494d;
