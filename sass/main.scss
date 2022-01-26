@@ -35,6 +35,8 @@ $light-color-3: hsl(185, 41%, 84%);
 $light-color-2: hsl(189, 41%, 97%);
 $light-color-1: hsl(0, 0%, 100%);
 
+$small: 675px;
+
 html {
   font-size: 62.5%;
   font-family: "Space Mono", monospace;
@@ -57,12 +59,20 @@ body {
 }
 
 .container {
-  width: 805px;
+  width: 60%;
+  min-width: 675px;
   background-color: #fff;
   border-radius: $border-radius;
   box-shadow: 0 0 20px rgb(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (max-width: $small) {
+    width: 80%;
+    min-width: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 
 .btn {
@@ -124,7 +134,8 @@ body {
 
     &--custom {
       text-align: center;
-      width: 10rem;
+      width: 28%;
+      min-width: 80px;
       font-size: 2rem;
       margin: 0.5rem 0.25rem;
       padding: 0;
@@ -142,8 +153,9 @@ body {
 
   .check-box {
     .btn {
-      width: 10rem;
+      width: 28%;
       height: 4rem;
+      min-width: 80px;
     }
 
     .btn.active {
@@ -155,6 +167,9 @@ body {
 
 .form {
   margin: 2rem;
+  @media screen and (max-width: $small) {
+    margin: 0;
+  }
 }
 
 .calc {
